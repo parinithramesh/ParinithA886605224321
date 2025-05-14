@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intermediate HTML Page</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    :root {
+      --primary-bg: #f4f4f4;
+      --primary-text: #333;
+      --nav-bg: #34495e;
+      --nav-hover: #2c3e50;
+      --header-bg: #2c3e50;
+      --footer-bg: #2c3e50;
+      --aside-bg: #ecf0f1;
+    }
+
+    body.dark {
+      --primary-bg: #1e1e1e;
+      --primary-text: #ddd;
+      --nav-bg: #2c3e50;
+      --nav-hover: #1a252f;
+      --header-bg: #1a252f;
+      --footer-bg: #1a252f;
+      --aside-bg: #2e3b4e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    nav a:hover {
+      background-color: var(--nav-hover);
+      border-radius: 5px;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    main {
+      display: flex;
+      padding: 1rem;
+    }
+
+    article {
+      flex: 3;
+      padding: 1rem;
+      background-color: white;
+      margin-right: 1rem;
+      border-radius: 8px;
+    }
+
+    aside {
+      flex: 1;
+      background-color: var(--aside-bg);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: var(--footer-bg);
+      color: white;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #34495e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      article {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+
+      .toggle-btn {
+        top: auto;
+        bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Dark Mode</button>
+
+  <header>
+    <h1>My Intermediate HTML Page</h1>
+    <p>Learning Semantic HTML Structure</p>
+  </header>
+
+  <img class="banner" src="https://via.placeholder.com/1200x300.png?text=Welcome+to+My+Page" alt="Banner Image" />
+
+  <nav role="navigation" aria-label="Main menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Welcome!</h2>
+      <p>This is the main content area. You can write blog posts, add images, or embed videos here.</p>
+      <section>
+        <h3>Latest Update</h3>
+        <p>This section demonstrates use of <code>&lt;section&gt;</code> inside an article tag.</p>
+      </section>
+    </article>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This could be recent posts, a newsletter sign-up, or anything else you like.</p>
+    </aside>
+  </main>
+
+  <footer>
+    &copy; 2025 MySite | Built with HTML5 & CSS3
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+OBOBOBOBOB</body>
+</html>
+
